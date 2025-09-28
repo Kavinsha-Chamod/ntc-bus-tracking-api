@@ -1,12 +1,11 @@
 import mongoose from "mongoose";
 
 const busSchema = new mongoose.Schema({
-  busId: { type: String, required: true, unique: true },
-  vehicle_no: { type: String, required: true, unique: true },
-  operator: { type: String, required: true },
-  capacity: Number,
-  model: String,
-  assignedRoute: { type: String, ref: "Route" },
+  bus_id: { type: String, required: true, unique: true },       
+  type: { type: String, required: true },                      
+  capacity: { type: Number, required: true },
+  primary_route: { type: String, ref: "Route" },              
+  weekly_trips: { type: Number, default: 0 },                   
 });
 
 const Bus = mongoose.model("Bus", busSchema);

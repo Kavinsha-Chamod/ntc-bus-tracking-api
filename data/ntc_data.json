@@ -1,0 +1,1737 @@
+{
+  "routes": [
+    {
+      "route_id": "R001",
+      "route_name": "Colombo - Kandy",
+      "start_point": "Colombo Fort",
+      "end_point": "Kandy Clock Tower",
+      "distance_km": 115,
+      "est_duration_hrs": 3.5,
+      "daily_trips_avg": 6
+    },
+    {
+      "route_id": "R002",
+      "route_name": "Colombo - Galle",
+      "start_point": "Colombo Fort",
+      "end_point": "Galle Fort",
+      "distance_km": 120,
+      "est_duration_hrs": 3,
+      "daily_trips_avg": 5
+    },
+    {
+      "route_id": "R003",
+      "route_name": "Colombo - Matara",
+      "start_point": "Colombo Fort",
+      "end_point": "Matara Bus Stand",
+      "distance_km": 160,
+      "est_duration_hrs": 4,
+      "daily_trips_avg": 5
+    },
+    {
+      "route_id": "R004",
+      "route_name": "Colombo - Jaffna",
+      "start_point": "Colombo Fort",
+      "end_point": "Jaffna Bus Stand",
+      "distance_km": 400,
+      "est_duration_hrs": 9,
+      "daily_trips_avg": 4
+    },
+    {
+      "route_id": "R005",
+      "route_name": "Colombo - Anuradhapura",
+      "start_point": "Colombo Fort",
+      "end_point": "Anuradhapura",
+      "distance_km": 210,
+      "est_duration_hrs": 5.5,
+      "daily_trips_avg": 5
+    }
+  ],
+  "buses": [
+    {
+      "bus_id": "B001",
+      "type": "AC Luxury",
+      "capacity": 45,
+      "primary_route": "R001",
+      "weekly_trips": 28
+    },
+    {
+      "bus_id": "B002",
+      "type": "AC Luxury",
+      "capacity": 45,
+      "primary_route": "R001",
+      "weekly_trips": 25
+    },
+    {
+      "bus_id": "B003",
+      "type": "Standard Non-AC",
+      "capacity": 50,
+      "primary_route": "R002",
+      "weekly_trips": 30
+    },
+    {
+      "bus_id": "B004",
+      "type": "Standard Non-AC",
+      "capacity": 50,
+      "primary_route": "R002",
+      "weekly_trips": 28
+    },
+    {
+      "bus_id": "B005",
+      "type": "AC Semi-Luxury",
+      "capacity": 40,
+      "primary_route": "R003",
+      "weekly_trips": 26
+    },
+    {
+      "bus_id": "B006",
+      "type": "AC Semi-Luxury",
+      "capacity": 40,
+      "primary_route": "R003",
+      "weekly_trips": 24
+    },
+    {
+      "bus_id": "B007",
+      "type": "Standard Non-AC",
+      "capacity": 50,
+      "primary_route": "R004",
+      "weekly_trips": 20
+    },
+    {
+      "bus_id": "B008",
+      "type": "Standard Non-AC",
+      "capacity": 50,
+      "primary_route": "R004",
+      "weekly_trips": 22
+    },
+    {
+      "bus_id": "B009",
+      "type": "AC Luxury",
+      "capacity": 45,
+      "primary_route": "R005",
+      "weekly_trips": 27
+    },
+    {
+      "bus_id": "B010",
+      "type": "AC Luxury",
+      "capacity": 45,
+      "primary_route": "R005",
+      "weekly_trips": 25
+    },
+    {
+      "bus_id": "B011",
+      "type": "Standard Non-AC",
+      "capacity": 50,
+      "primary_route": "R001",
+      "weekly_trips": 29
+    },
+    {
+      "bus_id": "B012",
+      "type": "AC Semi-Luxury",
+      "capacity": 40,
+      "primary_route": "R002",
+      "weekly_trips": 26
+    },
+    {
+      "bus_id": "B013",
+      "type": "Standard Non-AC",
+      "capacity": 50,
+      "primary_route": "R003",
+      "weekly_trips": 28
+    },
+    {
+      "bus_id": "B014",
+      "type": "AC Luxury",
+      "capacity": 45,
+      "primary_route": "R004",
+      "weekly_trips": 21
+    },
+    {
+      "bus_id": "B015",
+      "type": "AC Semi-Luxury",
+      "capacity": 40,
+      "primary_route": "R005",
+      "weekly_trips": 24
+    },
+    {
+      "bus_id": "B016",
+      "type": "Standard Non-AC",
+      "capacity": 50,
+      "primary_route": "R001",
+      "weekly_trips": 27
+    },
+    {
+      "bus_id": "B017",
+      "type": "AC Luxury",
+      "capacity": 45,
+      "primary_route": "R002",
+      "weekly_trips": 25
+    },
+    {
+      "bus_id": "B018",
+      "type": "Standard Non-AC",
+      "capacity": 50,
+      "primary_route": "R003",
+      "weekly_trips": 26
+    },
+    {
+      "bus_id": "B019",
+      "type": "AC Semi-Luxury",
+      "capacity": 40,
+      "primary_route": "R004",
+      "weekly_trips": 23
+    },
+    {
+      "bus_id": "B020",
+      "type": "AC Luxury",
+      "capacity": 45,
+      "primary_route": "R005",
+      "weekly_trips": 28
+    },
+    {
+      "bus_id": "B021",
+      "type": "Standard Non-AC",
+      "capacity": 50,
+      "primary_route": "R001",
+      "weekly_trips": 30
+    },
+    {
+      "bus_id": "B022",
+      "type": "AC Semi-Luxury",
+      "capacity": 40,
+      "primary_route": "R002",
+      "weekly_trips": 27
+    },
+    {
+      "bus_id": "B023",
+      "type": "Standard Non-AC",
+      "capacity": 50,
+      "primary_route": "R003",
+      "weekly_trips": 25
+    },
+    {
+      "bus_id": "B024",
+      "type": "AC Luxury",
+      "capacity": 45,
+      "primary_route": "R004",
+      "weekly_trips": 22
+    },
+    {
+      "bus_id": "B025",
+      "type": "AC Semi-Luxury",
+      "capacity": 40,
+      "primary_route": "R005",
+      "weekly_trips": 26
+    }
+  ],
+  "schedule": {
+    "2025-09-29": [
+      {
+        "route_id": "R001",
+        "trips": [
+          {
+            "trip_id": "T001-2909",
+            "departure_time": "06:00",
+            "bus_id": "B001",
+            "est_arrival": "09:30",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-2909",
+            "departure_time": "09:30",
+            "bus_id": "B011",
+            "est_arrival": "13:00",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-2909",
+            "departure_time": "13:00",
+            "bus_id": "B016",
+            "est_arrival": "16:30",
+            "fare_lkr": 750,
+            "status": "Delayed 15min"
+          },
+          {
+            "trip_id": "T004-2909",
+            "departure_time": "16:30",
+            "bus_id": "B021",
+            "est_arrival": "20:00",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T005-2909",
+            "departure_time": "20:00",
+            "bus_id": "B002",
+            "est_arrival": "23:30",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T006-2909",
+            "departure_time": "23:30",
+            "bus_id": "B012",
+            "est_arrival": "03:00",
+            "fare_lkr": 850,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R002",
+        "trips": [
+          {
+            "trip_id": "T001-2909",
+            "departure_time": "05:45",
+            "bus_id": "B003",
+            "est_arrival": "08:45",
+            "fare_lkr": 600,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-2909",
+            "departure_time": "09:00",
+            "bus_id": "B012",
+            "est_arrival": "12:00",
+            "fare_lkr": 600,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-2909",
+            "departure_time": "12:30",
+            "bus_id": "B017",
+            "est_arrival": "15:30",
+            "fare_lkr": 600,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-2909",
+            "departure_time": "15:45",
+            "bus_id": "B022",
+            "est_arrival": "18:45",
+            "fare_lkr": 600,
+            "status": "Delayed 10min"
+          },
+          {
+            "trip_id": "T005-2909",
+            "departure_time": "19:30",
+            "bus_id": "B004",
+            "est_arrival": "22:30",
+            "fare_lkr": 600,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R003",
+        "trips": [
+          {
+            "trip_id": "T001-2909",
+            "departure_time": "06:15",
+            "bus_id": "B005",
+            "est_arrival": "10:15",
+            "fare_lkr": 800,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-2909",
+            "departure_time": "10:00",
+            "bus_id": "B013",
+            "est_arrival": "14:00",
+            "fare_lkr": 800,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-2909",
+            "departure_time": "13:45",
+            "bus_id": "B018",
+            "est_arrival": "17:45",
+            "fare_lkr": 800,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-2909",
+            "departure_time": "17:15",
+            "bus_id": "B023",
+            "est_arrival": "21:15",
+            "fare_lkr": 800,
+            "status": "Delayed 20min"
+          },
+          {
+            "trip_id": "T005-2909",
+            "departure_time": "21:00",
+            "bus_id": "B006",
+            "est_arrival": "01:00",
+            "fare_lkr": 900,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R004",
+        "trips": [
+          {
+            "trip_id": "T001-2909",
+            "departure_time": "05:00",
+            "bus_id": "B007",
+            "est_arrival": "14:00",
+            "fare_lkr": 2500,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-2909",
+            "departure_time": "11:00",
+            "bus_id": "B014",
+            "est_arrival": "20:00",
+            "fare_lkr": 2500,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-2909",
+            "departure_time": "17:00",
+            "bus_id": "B019",
+            "est_arrival": "02:00",
+            "fare_lkr": 2500,
+            "status": "Delayed 30min"
+          },
+          {
+            "trip_id": "T004-2909",
+            "departure_time": "23:00",
+            "bus_id": "B024",
+            "est_arrival": "08:00",
+            "fare_lkr": 2700,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R005",
+        "trips": [
+          {
+            "trip_id": "T001-2909",
+            "departure_time": "06:30",
+            "bus_id": "B009",
+            "est_arrival": "12:00",
+            "fare_lkr": 1200,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-2909",
+            "departure_time": "10:15",
+            "bus_id": "B015",
+            "est_arrival": "15:45",
+            "fare_lkr": 1200,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-2909",
+            "departure_time": "14:00",
+            "bus_id": "B020",
+            "est_arrival": "19:30",
+            "fare_lkr": 1200,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-2909",
+            "departure_time": "18:30",
+            "bus_id": "B025",
+            "est_arrival": "24:00",
+            "fare_lkr": 1200,
+            "status": "Delayed 15min"
+          },
+          {
+            "trip_id": "T005-2909",
+            "departure_time": "22:00",
+            "bus_id": "B010",
+            "est_arrival": "03:30",
+            "fare_lkr": 1300,
+            "status": "On-time"
+          }
+        ]
+      }
+    ],
+    "2025-09-30": [
+      {
+        "route_id": "R001",
+        "trips": [
+          {
+            "trip_id": "T001-3009",
+            "departure_time": "06:00",
+            "bus_id": "B002",
+            "est_arrival": "09:30",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-3009",
+            "departure_time": "09:30",
+            "bus_id": "B016",
+            "est_arrival": "13:00",
+            "fare_lkr": 750,
+            "status": "Delayed 10min"
+          },
+          {
+            "trip_id": "T003-3009",
+            "departure_time": "13:00",
+            "bus_id": "B021",
+            "est_arrival": "16:30",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-3009",
+            "departure_time": "16:30",
+            "bus_id": "B011",
+            "est_arrival": "20:00",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T005-3009",
+            "departure_time": "20:00",
+            "bus_id": "B001",
+            "est_arrival": "23:30",
+            "fare_lkr": 750,
+            "status": "Delayed 15min"
+          },
+          {
+            "trip_id": "T006-3009",
+            "departure_time": "23:30",
+            "bus_id": "B012",
+            "est_arrival": "03:00",
+            "fare_lkr": 850,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R002",
+        "trips": [
+          {
+            "trip_id": "T001-3009",
+            "departure_time": "05:45",
+            "bus_id": "B004",
+            "est_arrival": "08:45",
+            "fare_lkr": 600,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-3009",
+            "departure_time": "09:00",
+            "bus_id": "B017",
+            "est_arrival": "12:00",
+            "fare_lkr": 600,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-3009",
+            "departure_time": "12:30",
+            "bus_id": "B022",
+            "est_arrival": "15:30",
+            "fare_lkr": 600,
+            "status": "Delayed 15min"
+          },
+          {
+            "trip_id": "T004-3009",
+            "departure_time": "15:45",
+            "bus_id": "B003",
+            "est_arrival": "18:45",
+            "fare_lkr": 600,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T005-3009",
+            "departure_time": "19:30",
+            "bus_id": "B012",
+            "est_arrival": "22:30",
+            "fare_lkr": 600,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R003",
+        "trips": [
+          {
+            "trip_id": "T001-3009",
+            "departure_time": "06:15",
+            "bus_id": "B006",
+            "est_arrival": "10:15",
+            "fare_lkr": 800,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-3009",
+            "departure_time": "10:00",
+            "bus_id": "B018",
+            "est_arrival": "14:00",
+            "fare_lkr": 800,
+            "status": "Delayed 15min"
+          },
+          {
+            "trip_id": "T003-3009",
+            "departure_time": "13:45",
+            "bus_id": "B023",
+            "est_arrival": "17:45",
+            "fare_lkr": 800,
+            "status": "Delayed 10min"
+          },
+          {
+            "trip_id": "T004-3009",
+            "departure_time": "17:15",
+            "bus_id": "B005",
+            "est_arrival": "21:15",
+            "fare_lkr": 800,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T005-3009",
+            "departure_time": "21:00",
+            "bus_id": "B013",
+            "est_arrival": "01:00",
+            "fare_lkr": 900,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R004",
+        "trips": [
+          {
+            "trip_id": "T001-3009",
+            "departure_time": "05:00",
+            "bus_id": "B008",
+            "est_arrival": "14:00",
+            "fare_lkr": 2500,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-3009",
+            "departure_time": "11:00",
+            "bus_id": "B019",
+            "est_arrival": "20:00",
+            "fare_lkr": 2500,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-3009",
+            "departure_time": "17:00",
+            "bus_id": "B024",
+            "est_arrival": "02:00",
+            "fare_lkr": 2500,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-3009",
+            "departure_time": "23:00",
+            "bus_id": "B007",
+            "est_arrival": "08:00",
+            "fare_lkr": 2700,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R005",
+        "trips": [
+          {
+            "trip_id": "T001-3009",
+            "departure_time": "06:30",
+            "bus_id": "B010",
+            "est_arrival": "12:00",
+            "fare_lkr": 1200,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-3009",
+            "departure_time": "10:15",
+            "bus_id": "B020",
+            "est_arrival": "15:45",
+            "fare_lkr": 1200,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-3009",
+            "departure_time": "14:00",
+            "bus_id": "B025",
+            "est_arrival": "19:30",
+            "fare_lkr": 1200,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-3009",
+            "departure_time": "18:30",
+            "bus_id": "B009",
+            "est_arrival": "24:00",
+            "fare_lkr": 1200,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T005-3009",
+            "departure_time": "22:00",
+            "bus_id": "B015",
+            "est_arrival": "03:30",
+            "fare_lkr": 1300,
+            "status": "Delayed 10min"
+          }
+        ]
+      }
+    ],
+    "2025-10-01": [
+      {
+        "route_id": "R001",
+        "trips": [
+          {
+            "trip_id": "T001-0110",
+            "departure_time": "05:45",
+            "bus_id": "B011",
+            "est_arrival": "09:15",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0110",
+            "departure_time": "09:15",
+            "bus_id": "B021",
+            "est_arrival": "12:45",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0110",
+            "departure_time": "12:45",
+            "bus_id": "B002",
+            "est_arrival": "16:15",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-0110",
+            "departure_time": "16:15",
+            "bus_id": "B016",
+            "est_arrival": "19:45",
+            "fare_lkr": 750,
+            "status": "Delayed 10min"
+          },
+          {
+            "trip_id": "T005-0110",
+            "departure_time": "19:45",
+            "bus_id": "B001",
+            "est_arrival": "23:15",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T006-0110",
+            "departure_time": "23:15",
+            "bus_id": "B012",
+            "est_arrival": "02:45",
+            "fare_lkr": 850,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R002",
+        "trips": [
+          {
+            "trip_id": "T001-0110",
+            "departure_time": "05:30",
+            "bus_id": "B017",
+            "est_arrival": "08:30",
+            "fare_lkr": 600,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0110",
+            "departure_time": "08:45",
+            "bus_id": "B022",
+            "est_arrival": "11:45",
+            "fare_lkr": 600,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0110",
+            "departure_time": "12:15",
+            "bus_id": "B003",
+            "est_arrival": "15:15",
+            "fare_lkr": 600,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-0110",
+            "departure_time": "15:30",
+            "bus_id": "B004",
+            "est_arrival": "18:30",
+            "fare_lkr": 600,
+            "status": "Delayed 15min"
+          },
+          {
+            "trip_id": "T005-0110",
+            "departure_time": "19:15",
+            "bus_id": "B012",
+            "est_arrival": "22:15",
+            "fare_lkr": 600,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R003",
+        "trips": [
+          {
+            "trip_id": "T001-0110",
+            "departure_time": "06:00",
+            "bus_id": "B013",
+            "est_arrival": "10:00",
+            "fare_lkr": 800,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0110",
+            "departure_time": "09:45",
+            "bus_id": "B023",
+            "est_arrival": "13:45",
+            "fare_lkr": 800,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0110",
+            "departure_time": "13:30",
+            "bus_id": "B005",
+            "est_arrival": "17:30",
+            "fare_lkr": 800,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-0110",
+            "departure_time": "17:00",
+            "bus_id": "B018",
+            "est_arrival": "21:00",
+            "fare_lkr": 800,
+            "status": "Delayed 15min"
+          },
+          {
+            "trip_id": "T005-0110",
+            "departure_time": "20:45",
+            "bus_id": "B006",
+            "est_arrival": "00:45",
+            "fare_lkr": 900,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R004",
+        "trips": [
+          {
+            "trip_id": "T001-0110",
+            "departure_time": "04:45",
+            "bus_id": "B014",
+            "est_arrival": "13:45",
+            "fare_lkr": 2500,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0110",
+            "departure_time": "10:45",
+            "bus_id": "B024",
+            "est_arrival": "19:45",
+            "fare_lkr": 2500,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0110",
+            "departure_time": "16:45",
+            "bus_id": "B007",
+            "est_arrival": "01:45",
+            "fare_lkr": 2500,
+            "status": "Delayed 20min"
+          },
+          {
+            "trip_id": "T004-0110",
+            "departure_time": "22:45",
+            "bus_id": "B019",
+            "est_arrival": "07:45",
+            "fare_lkr": 2700,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R005",
+        "trips": [
+          {
+            "trip_id": "T001-0110",
+            "departure_time": "06:15",
+            "bus_id": "B015",
+            "est_arrival": "11:45",
+            "fare_lkr": 1200,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0110",
+            "departure_time": "10:00",
+            "bus_id": "B025",
+            "est_arrival": "15:30",
+            "fare_lkr": 1200,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0110",
+            "departure_time": "13:45",
+            "bus_id": "B009",
+            "est_arrival": "19:15",
+            "fare_lkr": 1200,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-0110",
+            "departure_time": "18:15",
+            "bus_id": "B010",
+            "est_arrival": "23:45",
+            "fare_lkr": 1200,
+            "status": "Delayed 10min"
+          },
+          {
+            "trip_id": "T005-0110",
+            "departure_time": "21:45",
+            "bus_id": "B020",
+            "est_arrival": "03:15",
+            "fare_lkr": 1300,
+            "status": "On-time"
+          }
+        ]
+      }
+    ],
+    "2025-10-02": [
+      {
+        "route_id": "R001",
+        "trips": [
+          {
+            "trip_id": "T001-0210",
+            "departure_time": "06:00",
+            "bus_id": "B016",
+            "est_arrival": "09:30",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0210",
+            "departure_time": "09:30",
+            "bus_id": "B001",
+            "est_arrival": "13:00",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0210",
+            "departure_time": "13:00",
+            "bus_id": "B011",
+            "est_arrival": "16:30",
+            "fare_lkr": 750,
+            "status": "Delayed 15min"
+          },
+          {
+            "trip_id": "T004-0210",
+            "departure_time": "16:30",
+            "bus_id": "B021",
+            "est_arrival": "20:00",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T005-0210",
+            "departure_time": "20:00",
+            "bus_id": "B002",
+            "est_arrival": "23:30",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T006-0210",
+            "departure_time": "23:30",
+            "bus_id": "B012",
+            "est_arrival": "03:00",
+            "fare_lkr": 850,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R002",
+        "trips": [
+          {
+            "trip_id": "T001-0210",
+            "departure_time": "05:45",
+            "bus_id": "B022",
+            "est_arrival": "08:45",
+            "fare_lkr": 600,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0210",
+            "departure_time": "09:00",
+            "bus_id": "B003",
+            "est_arrival": "12:00",
+            "fare_lkr": 600,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0210",
+            "departure_time": "12:30",
+            "bus_id": "B004",
+            "est_arrival": "15:30",
+            "fare_lkr": 600,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-0210",
+            "departure_time": "15:45",
+            "bus_id": "B017",
+            "est_arrival": "18:45",
+            "fare_lkr": 600,
+            "status": "Delayed 10min"
+          },
+          {
+            "trip_id": "T005-0210",
+            "departure_time": "19:30",
+            "bus_id": "B012",
+            "est_arrival": "22:30",
+            "fare_lkr": 600,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R003",
+        "trips": [
+          {
+            "trip_id": "T001-0210",
+            "departure_time": "06:15",
+            "bus_id": "B018",
+            "est_arrival": "10:15",
+            "fare_lkr": 800,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0210",
+            "departure_time": "10:00",
+            "bus_id": "B005",
+            "est_arrival": "14:00",
+            "fare_lkr": 800,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0210",
+            "departure_time": "13:45",
+            "bus_id": "B006",
+            "est_arrival": "17:45",
+            "fare_lkr": 800,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-0210",
+            "departure_time": "17:15",
+            "bus_id": "B013",
+            "est_arrival": "21:15",
+            "fare_lkr": 800,
+            "status": "Delayed 15min"
+          },
+          {
+            "trip_id": "T005-0210",
+            "departure_time": "21:00",
+            "bus_id": "B023",
+            "est_arrival": "01:00",
+            "fare_lkr": 900,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R004",
+        "trips": [
+          {
+            "trip_id": "T001-0210",
+            "departure_time": "05:00",
+            "bus_id": "B019",
+            "est_arrival": "14:00",
+            "fare_lkr": 2500,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0210",
+            "departure_time": "11:00",
+            "bus_id": "B007",
+            "est_arrival": "20:00",
+            "fare_lkr": 2500,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0210",
+            "departure_time": "17:00",
+            "bus_id": "B008",
+            "est_arrival": "02:00",
+            "fare_lkr": 2500,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-0210",
+            "departure_time": "23:00",
+            "bus_id": "B014",
+            "est_arrival": "08:00",
+            "fare_lkr": 2700,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R005",
+        "trips": [
+          {
+            "trip_id": "T001-0210",
+            "departure_time": "06:30",
+            "bus_id": "B020",
+            "est_arrival": "12:00",
+            "fare_lkr": 1200,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0210",
+            "departure_time": "10:15",
+            "bus_id": "B009",
+            "est_arrival": "15:45",
+            "fare_lkr": 1200,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0210",
+            "departure_time": "14:00",
+            "bus_id": "B010",
+            "est_arrival": "19:30",
+            "fare_lkr": 1200,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-0210",
+            "departure_time": "18:30",
+            "bus_id": "B015",
+            "est_arrival": "24:00",
+            "fare_lkr": 1200,
+            "status": "Delayed 15min"
+          },
+          {
+            "trip_id": "T005-0210",
+            "departure_time": "22:00",
+            "bus_id": "B025",
+            "est_arrival": "03:30",
+            "fare_lkr": 1300,
+            "status": "On-time"
+          }
+        ]
+      }
+    ],
+    "2025-10-03": [
+      {
+        "route_id": "R001",
+        "trips": [
+          {
+            "trip_id": "T001-0310",
+            "departure_time": "06:00",
+            "bus_id": "B021",
+            "est_arrival": "09:30",
+            "fare_lkr": 825,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0310",
+            "departure_time": "09:30",
+            "bus_id": "B002",
+            "est_arrival": "13:00",
+            "fare_lkr": 825,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0310",
+            "departure_time": "13:00",
+            "bus_id": "B016",
+            "est_arrival": "16:30",
+            "fare_lkr": 825,
+            "status": "Delayed 10min"
+          },
+          {
+            "trip_id": "T004-0310",
+            "departure_time": "16:30",
+            "bus_id": "B011",
+            "est_arrival": "20:00",
+            "fare_lkr": 825,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T005-0310",
+            "departure_time": "20:00",
+            "bus_id": "B001",
+            "est_arrival": "23:30",
+            "fare_lkr": 825,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T006-0310",
+            "departure_time": "23:30",
+            "bus_id": "B012",
+            "est_arrival": "03:00",
+            "fare_lkr": 935,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R002",
+        "trips": [
+          {
+            "trip_id": "T001-0310",
+            "departure_time": "05:45",
+            "bus_id": "B003",
+            "est_arrival": "08:45",
+            "fare_lkr": 660,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0310",
+            "departure_time": "09:00",
+            "bus_id": "B017",
+            "est_arrival": "12:00",
+            "fare_lkr": 660,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0310",
+            "departure_time": "12:30",
+            "bus_id": "B022",
+            "est_arrival": "15:30",
+            "fare_lkr": 660,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-0310",
+            "departure_time": "15:45",
+            "bus_id": "B004",
+            "est_arrival": "18:45",
+            "fare_lkr": 660,
+            "status": "Delayed 10min"
+          },
+          {
+            "trip_id": "T005-0310",
+            "departure_time": "19:30",
+            "bus_id": "B012",
+            "est_arrival": "22:30",
+            "fare_lkr": 660,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R003",
+        "trips": [
+          {
+            "trip_id": "T001-0310",
+            "departure_time": "06:15",
+            "bus_id": "B005",
+            "est_arrival": "10:15",
+            "fare_lkr": 880,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0310",
+            "departure_time": "10:00",
+            "bus_id": "B013",
+            "est_arrival": "14:00",
+            "fare_lkr": 880,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0310",
+            "departure_time": "13:45",
+            "bus_id": "B018",
+            "est_arrival": "17:45",
+            "fare_lkr": 880,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-0310",
+            "departure_time": "17:15",
+            "bus_id": "B023",
+            "est_arrival": "21:15",
+            "fare_lkr": 880,
+            "status": "Delayed 15min"
+          },
+          {
+            "trip_id": "T005-0310",
+            "departure_time": "21:00",
+            "bus_id": "B006",
+            "est_arrival": "01:00",
+            "fare_lkr": 990,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R004",
+        "trips": [
+          {
+            "trip_id": "T001-0310",
+            "departure_time": "05:00",
+            "bus_id": "B007",
+            "est_arrival": "14:00",
+            "fare_lkr": 2875,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0310",
+            "departure_time": "11:00",
+            "bus_id": "B014",
+            "est_arrival": "20:00",
+            "fare_lkr": 2875,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0310",
+            "departure_time": "17:00",
+            "bus_id": "B019",
+            "est_arrival": "02:00",
+            "fare_lkr": 2875,
+            "status": "Delayed 30min"
+          },
+          {
+            "trip_id": "T004-0310",
+            "departure_time": "23:00",
+            "bus_id": "B024",
+            "est_arrival": "08:00",
+            "fare_lkr": 3105,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R005",
+        "trips": [
+          {
+            "trip_id": "T001-0310",
+            "departure_time": "06:30",
+            "bus_id": "B009",
+            "est_arrival": "12:00",
+            "fare_lkr": 1320,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0310",
+            "departure_time": "10:15",
+            "bus_id": "B015",
+            "est_arrival": "15:45",
+            "fare_lkr": 1320,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0310",
+            "departure_time": "14:00",
+            "bus_id": "B020",
+            "est_arrival": "19:30",
+            "fare_lkr": 1320,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-0310",
+            "departure_time": "18:30",
+            "bus_id": "B025",
+            "est_arrival": "24:00",
+            "fare_lkr": 1320,
+            "status": "Delayed 15min"
+          },
+          {
+            "trip_id": "T005-0310",
+            "departure_time": "22:00",
+            "bus_id": "B010",
+            "est_arrival": "03:30",
+            "fare_lkr": 1430,
+            "status": "On-time"
+          }
+        ]
+      }
+    ],
+    "2025-10-04": [
+      {
+        "route_id": "R001",
+        "trips": [
+          {
+            "trip_id": "T001-0410",
+            "departure_time": "06:00",
+            "bus_id": "B001",
+            "est_arrival": "09:30",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0410",
+            "departure_time": "09:30",
+            "bus_id": "B011",
+            "est_arrival": "13:00",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0410",
+            "departure_time": "13:00",
+            "bus_id": "B016",
+            "est_arrival": "16:30",
+            "fare_lkr": 750,
+            "status": "Delayed 10min"
+          },
+          {
+            "trip_id": "T004-0410",
+            "departure_time": "16:30",
+            "bus_id": "B021",
+            "est_arrival": "20:00",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T005-0410",
+            "departure_time": "20:00",
+            "bus_id": "B002",
+            "est_arrival": "23:30",
+            "fare_lkr": 750,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R002",
+        "trips": [
+          {
+            "trip_id": "T001-0410",
+            "departure_time": "05:45",
+            "bus_id": "B004",
+            "est_arrival": "08:45",
+            "fare_lkr": 600,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0410",
+            "departure_time": "09:00",
+            "bus_id": "B017",
+            "est_arrival": "12:00",
+            "fare_lkr": 600,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0410",
+            "departure_time": "12:30",
+            "bus_id": "B022",
+            "est_arrival": "15:30",
+            "fare_lkr": 600,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-0410",
+            "departure_time": "15:45",
+            "bus_id": "B003",
+            "est_arrival": "18:45",
+            "fare_lkr": 600,
+            "status": "Delayed 10min"
+          }
+        ]
+      },
+      {
+        "route_id": "R003",
+        "trips": [
+          {
+            "trip_id": "T001-0410",
+            "departure_time": "06:15",
+            "bus_id": "B006",
+            "est_arrival": "10:15",
+            "fare_lkr": 800,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0410",
+            "departure_time": "10:00",
+            "bus_id": "B013",
+            "est_arrival": "14:00",
+            "fare_lkr": 800,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0410",
+            "departure_time": "13:45",
+            "bus_id": "B018",
+            "est_arrival": "17:45",
+            "fare_lkr": 800,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-0410",
+            "departure_time": "17:15",
+            "bus_id": "B023",
+            "est_arrival": "21:15",
+            "fare_lkr": 800,
+            "status": "Delayed 15min"
+          }
+        ]
+      },
+      {
+        "route_id": "R004",
+        "trips": [
+          {
+            "trip_id": "T001-0410",
+            "departure_time": "05:00",
+            "bus_id": "B008",
+            "est_arrival": "14:00",
+            "fare_lkr": 2500,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0410",
+            "departure_time": "11:00",
+            "bus_id": "B019",
+            "est_arrival": "20:00",
+            "fare_lkr": 2500,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0410",
+            "departure_time": "17:00",
+            "bus_id": "B024",
+            "est_arrival": "02:00",
+            "fare_lkr": 2500,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R005",
+        "trips": [
+          {
+            "trip_id": "T001-0410",
+            "departure_time": "06:30",
+            "bus_id": "B010",
+            "est_arrival": "12:00",
+            "fare_lkr": 1200,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0410",
+            "departure_time": "10:15",
+            "bus_id": "B020",
+            "est_arrival": "15:45",
+            "fare_lkr": 1200,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0410",
+            "departure_time": "14:00",
+            "bus_id": "B025",
+            "est_arrival": "19:30",
+            "fare_lkr": 1200,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-0410",
+            "departure_time": "18:30",
+            "bus_id": "B009",
+            "est_arrival": "24:00",
+            "fare_lkr": 1200,
+            "status": "Delayed 10min"
+          }
+        ]
+      }
+    ],
+    "2025-10-05": [
+      {
+        "route_id": "R001",
+        "trips": [
+          {
+            "trip_id": "T001-0510",
+            "departure_time": "07:00",
+            "bus_id": "B002",
+            "est_arrival": "10:30",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0510",
+            "departure_time": "10:30",
+            "bus_id": "B016",
+            "est_arrival": "14:00",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0510",
+            "departure_time": "14:00",
+            "bus_id": "B021",
+            "est_arrival": "17:30",
+            "fare_lkr": 750,
+            "status": "Delayed 10min"
+          },
+          {
+            "trip_id": "T004-0510",
+            "departure_time": "17:30",
+            "bus_id": "B011",
+            "est_arrival": "21:00",
+            "fare_lkr": 750,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T005-0510",
+            "departure_time": "20:00",
+            "bus_id": "B001",
+            "est_arrival": "23:30",
+            "fare_lkr": 750,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R002",
+        "trips": [
+          {
+            "trip_id": "T001-0510",
+            "departure_time": "06:30",
+            "bus_id": "B017",
+            "est_arrival": "09:30",
+            "fare_lkr": 600,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0510",
+            "departure_time": "09:45",
+            "bus_id": "B022",
+            "est_arrival": "12:45",
+            "fare_lkr": 600,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0510",
+            "departure_time": "13:15",
+            "bus_id": "B003",
+            "est_arrival": "16:15",
+            "fare_lkr": 600,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-0510",
+            "departure_time": "16:30",
+            "bus_id": "B004",
+            "est_arrival": "19:30",
+            "fare_lkr": 600,
+            "status": "Delayed 10min"
+          }
+        ]
+      },
+      {
+        "route_id": "R003",
+        "trips": [
+          {
+            "trip_id": "T001-0510",
+            "departure_time": "07:00",
+            "bus_id": "B013",
+            "est_arrival": "11:00",
+            "fare_lkr": 800,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0510",
+            "departure_time": "10:45",
+            "bus_id": "B023",
+            "est_arrival": "14:45",
+            "fare_lkr": 800,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0510",
+            "departure_time": "14:30",
+            "bus_id": "B005",
+            "est_arrival": "18:30",
+            "fare_lkr": 800,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-0510",
+            "departure_time": "17:15",
+            "bus_id": "B018",
+            "est_arrival": "21:15",
+            "fare_lkr": 800,
+            "status": "Delayed 15min"
+          }
+        ]
+      },
+      {
+        "route_id": "R004",
+        "trips": [
+          {
+            "trip_id": "T001-0510",
+            "departure_time": "06:00",
+            "bus_id": "B014",
+            "est_arrival": "15:00",
+            "fare_lkr": 2500,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0510",
+            "departure_time": "12:00",
+            "bus_id": "B024",
+            "est_arrival": "21:00",
+            "fare_lkr": 2500,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0510",
+            "departure_time": "17:00",
+            "bus_id": "B007",
+            "est_arrival": "02:00",
+            "fare_lkr": 2500,
+            "status": "On-time"
+          }
+        ]
+      },
+      {
+        "route_id": "R005",
+        "trips": [
+          {
+            "trip_id": "T001-0510",
+            "departure_time": "07:30",
+            "bus_id": "B015",
+            "est_arrival": "13:00",
+            "fare_lkr": 1200,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T002-0510",
+            "departure_time": "11:15",
+            "bus_id": "B025",
+            "est_arrival": "16:45",
+            "fare_lkr": 1200,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T003-0510",
+            "departure_time": "14:45",
+            "bus_id": "B009",
+            "est_arrival": "20:15",
+            "fare_lkr": 1200,
+            "status": "On-time"
+          },
+          {
+            "trip_id": "T004-0510",
+            "departure_time": "18:30",
+            "bus_id": "B010",
+            "est_arrival": "24:00",
+            "fare_lkr": 1200,
+            "status": "Delayed 10min"
+          }
+        ]
+      }
+    ]
+  }
+}

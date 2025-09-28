@@ -1,18 +1,18 @@
 import mongoose from "mongoose";
 
 const locationSchema = new mongoose.Schema({
-  busId: { type: String, ref: "Bus", required: true },
+  bus_id: { type: String, ref: "Bus", required: true },
   timestamp: { type: Date, default: Date.now },
   coords: {
     type: [Number],
     required: true,
     index: "2dsphere",
   },
-  speed: Number,
+  speed: { type: Number },
   status: {
     type: String,
-    enum: ["on-time", "delayed", "stopped"],
-    default: "on-time",
+    enum: ["On-time", "Delayed", "Stopped"],
+    default: "On-time",
   },
 });
 

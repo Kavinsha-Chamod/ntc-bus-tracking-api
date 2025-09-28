@@ -1,16 +1,18 @@
 import mongoose from "mongoose";
 
 const tripSchema = new mongoose.Schema({
-  tripId: { type: String, required: true, unique: true },
-  busId: { type: String, ref: "Bus", required: true },
-  routeId: { type: String, ref: "Route", required: true },
-  departure: { type: Date, required: true },
-  estimatedDurationHours: Number,
+  trip_id: { type: String, required: true, unique: true },     
+  bus_id: { type: String, ref: "Bus", required: true },
+  route_id: { type: String, ref: "Route", required: true },
+  departure_time: { type: String, required: true },            
+  est_arrival: { type: String },                               
+  fare_lkr: { type: Number },
   status: {
     type: String,
-    enum: ["scheduled", "ongoing", "completed", "cancelled"],
-    default: "scheduled",
+    enum: ["On-time", "Delayed", "Cancelled"],
+    default: "On-time",
   },
+  date: { type: Date, required: true },                        
 });
 
 const Trip = mongoose.model("Trip", tripSchema);

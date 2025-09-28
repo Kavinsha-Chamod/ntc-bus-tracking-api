@@ -1,12 +1,13 @@
 import mongoose from "mongoose";
 
 const routeSchema = new mongoose.Schema({
-  routeId: { type: String, required: true, unique: true },
-  name: { type: String, required: true },
-  origin: { type: String, required: true },
-  destination: { type: String, required: true },
-  stops: [String],
-  distance_km: Number,
+  route_id: { type: String, required: true, unique: true }, 
+  route_name: { type: String, required: true },
+  start_point: { type: String, required: true },
+  end_point: { type: String, required: true },
+  distance_km: { type: Number },
+  est_duration_hrs: { type: Number },
+  daily_trips_avg: { type: Number },
 });
 
 const Route = mongoose.model("Route", routeSchema);
