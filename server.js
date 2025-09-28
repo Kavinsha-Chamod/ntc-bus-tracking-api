@@ -6,15 +6,17 @@ dotenv.config();
 connectDB();
 
 const app = express();
-
-app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.send("NTC Bus Tracking API is running...");
+app.use((req, res, next) => {
+  console.log(`Incoming request: ${req.method} ${req.url}`);
+  next();
 });
 
-const PORT = process.env.PORT || 5000;
+app.get("/", (req, res) => {
+  console.log("Root route reached");
+  res.status(200).send("NTC Bus Tracking API is running...");
+});
 
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
