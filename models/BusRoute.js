@@ -10,5 +10,5 @@ const routeSchema = new mongoose.Schema({
   daily_trips_avg: { type: Number },
 });
 
-const Route = mongoose.model("Route", routeSchema);
-export default Route;
+const BusRoute = mongoose.model("BusRoute", routeSchema, "busRoute"); 
+export default BusRoute;

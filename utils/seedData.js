@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import fs from "fs";
 import connectDB from "../config/db.js";
-import Route from "../models/BusRoute.js";
+import BusRoute from "../models/BusRoute.js";
 import Bus from "../models/Bus.js";
 import Trip from "../models/Trip.js";
 
@@ -10,14 +10,14 @@ dotenv.config();
 const seedData = async () => {
   try {
     await connectDB();
-    await Route.deleteMany({});
+    await BusRoute.deleteMany({});
     await Bus.deleteMany({});
     await Trip.deleteMany({});
     console.log("Existing data cleared");
 
     const data = JSON.parse(fs.readFileSync("./data/ntc_data.json", "utf-8"));
 
-    await Route.insertMany(data.routes);
+    await BusRoute.insertMany(data.routes);
     console.log("Routes seeded");
 
     await Bus.insertMany(data.buses);
@@ -28,7 +28,7 @@ const seedData = async () => {
     for (const date in data.schedule) {
       data.schedule[date].forEach((routeTrips) => {
         routeTrips.trips.forEach((trip) => {
-          const statusString = trip.status;
+          const statusString = trip.status || "";
           let status = "On-time";
           let delay_mins = 0;
 
@@ -39,12 +39,15 @@ const seedData = async () => {
           } else if (statusString === "Cancelled") {
             status = "Cancelled";
           }
+
           const uniqueTripId = `${trip.trip_id}-${date.replace(/-/g, "")}`;
 
           tripsWithDate.push({
             ...trip,
             trip_id: uniqueTripId,
-            route_id: routeTrips.route_id,
+            route_id: routeTrips.route_id || "R001",       
+            bus_id: trip.bus_id || "B001",                
+            departure_time: trip.departure_time || "08:00",
             date: new Date(date),
             status,
             delay_mins,

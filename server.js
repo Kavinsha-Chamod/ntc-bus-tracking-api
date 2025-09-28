@@ -2,6 +2,11 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 
+import busRouteRoutes from "./routes/busRouteRoutes.js";
+import busRoutes from "./routes/busRoutes.js";
+import tripRoutes from "./routes/tripRoutes.js";
+import locationRoutes from "./routes/locationRoutes.js";
+
 dotenv.config();
 connectDB();
 
@@ -11,10 +16,10 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/", (req, res) => {
-  console.log("Root route reached");
-  res.status(200).send("NTC Bus Tracking API is running...");
-});
+app.use("/api/routes", busRouteRoutes);
+app.use("/api/buses", busRoutes);
+app.use("/api/trips", tripRoutes);
+app.use("/api/locations", locationRoutes);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
