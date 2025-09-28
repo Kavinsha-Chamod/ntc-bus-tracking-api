@@ -5,7 +5,12 @@ const busSchema = new mongoose.Schema({
   type: { type: String, required: true },                      
   capacity: { type: Number, required: true },
   primary_route: { type: String, ref: "Route" },              
-  weekly_trips: { type: Number, default: 0 },                   
+  weekly_trips: { type: Number, default: 0 },   
+  location: {
+    latitude: { type: Number, default: 0 },
+    longitude: { type: Number, default: 0 },
+    updatedAt: { type: Date, default: Date.now }
+  }                
 });
 
 const Bus = mongoose.model("Bus", busSchema);
