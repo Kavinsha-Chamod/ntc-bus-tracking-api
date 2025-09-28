@@ -8,10 +8,12 @@ const tripSchema = new mongoose.Schema({
   est_arrival: { type: String },                               
   fare_lkr: { type: Number },
   status: {
-    type: String,
-    enum: ["On-time", "Delayed", "Cancelled"],
-    default: "On-time",
-  },
+  type: String,
+  enum: ["On-time", "Delayed", "Cancelled"],
+  default: "On-time",
+},
+delay_mins: { type: Number, default: 0 },
+
   date: { type: Date, required: true },                        
 });
 
