@@ -2,8 +2,8 @@ import Location from "../models/Location.js";
 
 export const addLocation = async (req, res) => {
   try {
-    const { busId, coords, speed, status } = req.body;
-    const location = new Location({ busId, coords, speed, status });
+    const { bus_id, coords, speed, status } = req.body;
+    const location = new Location({ bus_id, coords, speed, status });
     await location.save();
     res.status(201).json(location);
   } catch (err) {
