@@ -8,6 +8,9 @@ const { connectDB } = require('./config/db');
 const errorHandler = require('./middleware/errorHandler');
 const notFound = require('./middleware/notFound');
 
+// Import routers
+const authRoutes = require('./routes/authRoutes');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -18,6 +21,9 @@ app.use(helmet());
 app.use(cors({ origin: '*' })); 
 app.use(morgan('combined'));
 app.use(express.json({ limit: '10mb' }));
+
+// Routes (RESTful base /api)
+app.use('/api/auth', authRoutes);
 
 // Health check (with DB ping)
 app.get('/health', async (req, res) => {
