@@ -10,6 +10,7 @@ const notFound = require('./middleware/notFound');
 
 // Import routers
 const authRoutes = require('./routes/authRoutes');
+const busRoutes = require('./routes/busRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -24,6 +25,7 @@ app.use(express.json({ limit: '10mb' }));
 
 // Routes (RESTful base /api)
 app.use('/api/auth', authRoutes);
+app.use('/api/buses', busRoutes);
 
 // Health check (with DB ping)
 app.get('/health', async (req, res) => {
