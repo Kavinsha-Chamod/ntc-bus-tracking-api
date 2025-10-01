@@ -13,6 +13,7 @@ const authRoutes = require('./routes/authRoutes');
 const busRoutes = require('./routes/busRoutes');
 const locationRoutes = require('./routes/locationRoutes');
 const routeRoutes = require('./routes/routeRoutes');
+const tripRoutes = require('./routes/tripRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -30,6 +31,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/buses', busRoutes);
 app.use('/api/locations', locationRoutes);
 app.use('/api/routes', routeRoutes);
+app.use('/api/trips', tripRoutes);
 
 // Health check (with DB ping)
 app.get('/health', async (req, res) => {
