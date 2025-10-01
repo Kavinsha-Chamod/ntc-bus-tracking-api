@@ -29,6 +29,10 @@ app.get('/health', async (req, res) => {
   }
 });
 
+// 404 & Error handlers (robust)
+app.use(notFound);
+app.use(errorHandler);
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT} - Fully REST-compliant API`);
 });
