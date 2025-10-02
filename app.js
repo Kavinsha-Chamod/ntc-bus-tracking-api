@@ -27,6 +27,12 @@ app.use(morgan('combined'));
 app.use(express.json({ limit: '10mb' }));
 
 // Routes
+app.get('/', (req, res) => {
+  res.status(200).json({ message: 'NTC Bus Tracking service is running' });
+});
+app.get('/api', (req, res) => {
+  res.status(200).json({ message: 'NTC Bus Tracking service is running' });
+});
 app.use('/api/auth', authRoutes);
 app.use('/api/buses', busRoutes);
 app.use('/api/locations', locationRoutes);
