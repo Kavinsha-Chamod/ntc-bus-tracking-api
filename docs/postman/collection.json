@@ -11,7 +11,7 @@
       "item": [
         {
           "name": "GET /health",
-          "request": { "method": "GET", "header": [], "url": { "raw": "{{baseUrl}}/health", "host": ["{{baseUrl}}"], "path": ["health"] } }
+          "request": { "method": "GET", "header": [], "description": "Checks service status and MongoDB connectivity.", "url": { "raw": "{{baseUrl}}/health", "host": ["{{baseUrl}}"], "path": ["health"] } }
         }
       ]
     },
@@ -23,8 +23,19 @@
           "request": {
             "method": "POST",
             "header": [ { "key": "Content-Type", "value": "application/json" } ],
+            "description": "Authenticate with username/password and receive a JWT token.",
             "body": { "mode": "raw", "raw": "{\n  \"username\": \"username\",\n  \"password\": \"password123\"\n}" },
             "url": { "raw": "{{baseUrl}}/api/auth/login", "host": ["{{baseUrl}}"], "path": ["api","auth","login"] }
+          }
+        },
+        {
+          "name": "POST /api/auth/register (admin)",
+          "request": {
+            "method": "POST",
+            "header": [ { "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" } ],
+            "description": "Admin-only: create a new user with role operator or commuter.",
+            "body": { "mode": "raw", "raw": "{\n  \"username\": \"new_user\",\n  \"password\": \"secret\",\n  \"role\": \"operator\"\n}" },
+            "url": { "raw": "{{baseUrl}}/api/auth/register", "host": ["{{baseUrl}}"], "path": ["api","auth","register"] }
           }
         }
       ]
@@ -32,41 +43,41 @@
     {
       "name": "Buses",
       "item": [
-        { "name": "GET /api/buses", "request": { "method": "GET", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "url": { "raw": "{{baseUrl}}/api/buses", "host": ["{{baseUrl}}"], "path": ["api","buses"] } } },
-        { "name": "POST /api/buses", "request": { "method": "POST", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\n  \"number\": \"NA-1234\",\n  \"routeId\": \"<routeObjectId>\",\n  \"capacity\": 50\n}" }, "url": { "raw": "{{baseUrl}}/api/buses", "host": ["{{baseUrl}}"], "path": ["api","buses"] } } },
-        { "name": "GET /api/buses/:id", "request": { "method": "GET", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "url": { "raw": "{{baseUrl}}/api/buses/{{busId}}", "host": ["{{baseUrl}}"], "path": ["api","buses","{{busId}}"] } } },
-        { "name": "PUT /api/buses/:id", "request": { "method": "PUT", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\n  \"capacity\": 55\n}" }, "url": { "raw": "{{baseUrl}}/api/buses/{{busId}}", "host": ["{{baseUrl}}"], "path": ["api","buses","{{busId}}"] } } },
-        { "name": "DELETE /api/buses/:id", "request": { "method": "DELETE", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "url": { "raw": "{{baseUrl}}/api/buses/{{busId}}", "host": ["{{baseUrl}}"], "path": ["api","buses","{{busId}}"] } } }
+        { "name": "GET /api/buses", "request": { "method": "GET", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "description": "List buses. Optional query: routeId, sort (e.g., busId:desc).", "url": { "raw": "{{baseUrl}}/api/buses", "host": ["{{baseUrl}}"], "path": ["api","buses"] } } },
+        { "name": "POST /api/buses", "request": { "method": "POST", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" } ], "description": "Create a bus (JWT required).", "body": { "mode": "raw", "raw": "{\n  \"routeId\": 1001,\n  \"operatorId\": 2001,\n  \"capacity\": 50,\n  \"licensePlate\": \"NA-1234\"\n}" }, "url": { "raw": "{{baseUrl}}/api/buses", "host": ["{{baseUrl}}"], "path": ["api","buses"] } } },
+        { "name": "GET /api/buses/:id", "request": { "method": "GET", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "description": "Get a bus by busId.", "url": { "raw": "{{baseUrl}}/api/buses/{{busId}}", "host": ["{{baseUrl}}"], "path": ["api","buses","{{busId}}"] } } },
+        { "name": "PUT /api/buses/:id", "request": { "method": "PUT", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" } ], "description": "Update a bus by busId. Admin or owning operator.", "body": { "mode": "raw", "raw": "{\n  \"capacity\": 55\n}" }, "url": { "raw": "{{baseUrl}}/api/buses/{{busId}}", "host": ["{{baseUrl}}"], "path": ["api","buses","{{busId}}"] } } },
+        { "name": "DELETE /api/buses/:id", "request": { "method": "DELETE", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "description": "Delete a bus by busId (admin only).", "url": { "raw": "{{baseUrl}}/api/buses/{{busId}}", "host": ["{{baseUrl}}"], "path": ["api","buses","{{busId}}"] } } }
       ]
     },
     {
       "name": "Locations",
       "item": [
-        { "name": "GET /api/locations", "request": { "method": "GET", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "url": { "raw": "{{baseUrl}}/api/locations", "host": ["{{baseUrl}}"], "path": ["api","locations"] } } },
-        { "name": "POST /api/locations", "request": { "method": "POST", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\n  \"busId\": \"<busObjectId>\",\n  \"latitude\": 6.9271,\n  \"longitude\": 79.8612,\n  \"timestamp\": \"2025-01-01T12:00:00.000Z\"\n}" }, "url": { "raw": "{{baseUrl}}/api/locations", "host": ["{{baseUrl}}"], "path": ["api","locations"] } } },
-        { "name": "GET /api/locations/:id", "request": { "method": "GET", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "url": { "raw": "{{baseUrl}}/api/locations/{{locationId}}", "host": ["{{baseUrl}}"], "path": ["api","locations","{{locationId}}"] } } },
-        { "name": "PUT /api/locations/:id", "request": { "method": "PUT", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\n  \"latitude\": 6.93\n}" }, "url": { "raw": "{{baseUrl}}/api/locations/{{locationId}}", "host": ["{{baseUrl}}"], "path": ["api","locations","{{locationId}}"] } } },
-        { "name": "DELETE /api/locations/:id", "request": { "method": "DELETE", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "url": { "raw": "{{baseUrl}}/api/locations/{{locationId}}", "host": ["{{baseUrl}}"], "path": ["api","locations","{{locationId}}"] } } }
+        { "name": "GET /api/locations", "request": { "method": "GET", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "description": "List latest location per bus (ETag/304 supported). Optional query: busId.", "url": { "raw": "{{baseUrl}}/api/locations", "host": ["{{baseUrl}}"], "path": ["api","locations"] } } },
+        { "name": "POST /api/locations", "request": { "method": "POST", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" } ], "description": "Operator-only: upsert latest location for owned bus; validates coordinates.", "body": { "mode": "raw", "raw": "{\n  \"busId\": 1001,\n  \"latitude\": 6.9271,\n  \"longitude\": 79.8612\n}" }, "url": { "raw": "{{baseUrl}}/api/locations", "host": ["{{baseUrl}}"], "path": ["api","locations"] } } },
+        { "name": "GET /api/locations/:id", "request": { "method": "GET", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "description": "Get latest location for a busId (ETag/304 supported).", "url": { "raw": "{{baseUrl}}/api/locations/{{locationId}}", "host": ["{{baseUrl}}"], "path": ["api","locations","{{locationId}}"] } } },
+        { "name": "PUT /api/locations/:id", "request": { "method": "PUT", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" } ], "description": "Operator-only: update latest location record for busId.", "body": { "mode": "raw", "raw": "{\n  \"latitude\": 6.93,\n  \"longitude\": 79.86\n}" }, "url": { "raw": "{{baseUrl}}/api/locations/{{locationId}}", "host": ["{{baseUrl}}"], "path": ["api","locations","{{locationId}}"] } } },
+        { "name": "DELETE /api/locations/:id", "request": { "method": "DELETE", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "description": "Admin-only: delete location record for busId.", "url": { "raw": "{{baseUrl}}/api/locations/{{locationId}}", "host": ["{{baseUrl}}"], "path": ["api","locations","{{locationId}}"] } } }
       ]
     },
     {
       "name": "Routes (Admin)",
       "item": [
-        { "name": "GET /api/routes", "request": { "method": "GET", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "url": { "raw": "{{baseUrl}}/api/routes", "host": ["{{baseUrl}}"], "path": ["api","routes"] } } },
-        { "name": "POST /api/routes", "request": { "method": "POST", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\n  \"name\": \"Route 1\",\n  \"stops\": [\"Stop A\", \"Stop B\", \"Stop C\"]\n}" }, "url": { "raw": "{{baseUrl}}/api/routes", "host": ["{{baseUrl}}"], "path": ["api","routes"] } } },
-        { "name": "GET /api/routes/:id", "request": { "method": "GET", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "url": { "raw": "{{baseUrl}}/api/routes/{{routeId}}", "host": ["{{baseUrl}}"], "path": ["api","routes","{{routeId}}"] } } },
-        { "name": "PUT /api/routes/:id", "request": { "method": "PUT", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\n  \"name\": \"Route 1 Updated\"\n}" }, "url": { "raw": "{{baseUrl}}/api/routes/{{routeId}}", "host": ["{{baseUrl}}"], "path": ["api","routes","{{routeId}}"] } } },
-        { "name": "DELETE /api/routes/:id", "request": { "method": "DELETE", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "url": { "raw": "{{baseUrl}}/api/routes/{{routeId}}", "host": ["{{baseUrl}}"], "path": ["api","routes","{{routeId}}"] } } }
+        { "name": "GET /api/routes", "request": { "method": "GET", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "description": "Admin-only: list routes. Optional query: from, to, sort.", "url": { "raw": "{{baseUrl}}/api/routes", "host": ["{{baseUrl}}"], "path": ["api","routes"] } } },
+        { "name": "POST /api/routes", "request": { "method": "POST", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" } ], "description": "Admin-only: create a route.", "body": { "mode": "raw", "raw": "{\n  \"from\": \"Stop A\",\n  \"to\": \"Stop B\",\n  \"distance\": 120,\n  \"estimatedTime\": \"3h\",\n  \"frequency\": \"30m\"\n}" }, "url": { "raw": "{{baseUrl}}/api/routes", "host": ["{{baseUrl}}"], "path": ["api","routes"] } } },
+        { "name": "GET /api/routes/:id", "request": { "method": "GET", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "description": "Admin-only: get a route by routeId (ETag/304 supported).", "url": { "raw": "{{baseUrl}}/api/routes/{{routeId}}", "host": ["{{baseUrl}}"], "path": ["api","routes","{{routeId}}"] } } },
+        { "name": "PUT /api/routes/:id", "request": { "method": "PUT", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" } ], "description": "Admin-only: update a route by routeId.", "body": { "mode": "raw", "raw": "{\n  \"estimatedTime\": \"3h 10m\"\n}" }, "url": { "raw": "{{baseUrl}}/api/routes/{{routeId}}", "host": ["{{baseUrl}}"], "path": ["api","routes","{{routeId}}"] } } },
+        { "name": "DELETE /api/routes/:id", "request": { "method": "DELETE", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "description": "Admin-only: delete a route by routeId.", "url": { "raw": "{{baseUrl}}/api/routes/{{routeId}}", "host": ["{{baseUrl}}"], "path": ["api","routes","{{routeId}}"] } } }
       ]
     },
     {
       "name": "Trips",
       "item": [
-        { "name": "GET /api/trips", "request": { "method": "GET", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "url": { "raw": "{{baseUrl}}/api/trips", "host": ["{{baseUrl}}"], "path": ["api","trips"] } } },
-        { "name": "POST /api/trips", "request": { "method": "POST", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\n  \"busId\": \"<busObjectId>\",\n  \"routeId\": \"<routeObjectId>\",\n  \"startTime\": \"2025-01-01T08:00:00.000Z\"\n}" }, "url": { "raw": "{{baseUrl}}/api/trips", "host": ["{{baseUrl}}"], "path": ["api","trips"] } } },
-        { "name": "GET /api/trips/:id", "request": { "method": "GET", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "url": { "raw": "{{baseUrl}}/api/trips/{{tripId}}", "host": ["{{baseUrl}}"], "path": ["api","trips","{{tripId}}"] } } },
-        { "name": "PUT /api/trips/:id", "request": { "method": "PUT", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\n  \"endTime\": \"2025-01-01T10:00:00.000Z\"\n}" }, "url": { "raw": "{{baseUrl}}/api/trips/{{tripId}}", "host": ["{{baseUrl}}"], "path": ["api","trips","{{tripId}}"] } } },
-        { "name": "DELETE /api/trips/:id", "request": { "method": "DELETE", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "url": { "raw": "{{baseUrl}}/api/trips/{{tripId}}", "host": ["{{baseUrl}}"], "path": ["api","trips","{{tripId}}"] } } }
+        { "name": "GET /api/trips", "request": { "method": "GET", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "description": "List trips. Optional query: busId, status, sort.", "url": { "raw": "{{baseUrl}}/api/trips", "host": ["{{baseUrl}}"], "path": ["api","trips"] } } },
+        { "name": "POST /api/trips", "request": { "method": "POST", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" } ], "description": "Create a trip. Forbidden for commuter role.", "body": { "mode": "raw", "raw": "{\n  \"busId\": 1001,\n  \"departureTime\": \"2025-01-01T08:00:00.000Z\",\n  \"arrivalTime\": \"2025-01-01T10:00:00.000Z\",\n  \"status\": \"scheduled\"\n}" }, "url": { "raw": "{{baseUrl}}/api/trips", "host": ["{{baseUrl}}"], "path": ["api","trips"] } } },
+        { "name": "GET /api/trips/:id", "request": { "method": "GET", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "description": "Get a trip by tripId (ETag/304 supported).", "url": { "raw": "{{baseUrl}}/api/trips/{{tripId}}", "host": ["{{baseUrl}}"], "path": ["api","trips","{{tripId}}"] } } },
+        { "name": "PUT /api/trips/:id", "request": { "method": "PUT", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" } ], "description": "Update a trip by tripId. Commuter forbidden; operator must own bus.", "body": { "mode": "raw", "raw": "{\n  \"status\": \"in_transit\"\n}" }, "url": { "raw": "{{baseUrl}}/api/trips/{{tripId}}", "host": ["{{baseUrl}}"], "path": ["api","trips","{{tripId}}"] } } },
+        { "name": "DELETE /api/trips/:id", "request": { "method": "DELETE", "header": [ { "key": "Authorization", "value": "Bearer {{token}}" } ], "description": "Delete a trip by tripId (admin only).", "url": { "raw": "{{baseUrl}}/api/trips/{{tripId}}", "host": ["{{baseUrl}}"], "path": ["api","trips","{{tripId}}"] } } }
       ]
     }
   ],
